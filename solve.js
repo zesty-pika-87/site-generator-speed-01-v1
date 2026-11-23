@@ -563,12 +563,12 @@ function classifyLine(line) {
     return 7;
   }
   if (c0 === 45 || c0 === 42) {
-    if (isHr(line)) return 3;
     if (line.charCodeAt(1) === 32) {
       CLS.ordered = false;
       CLS.text = line.slice(2);
       return 5;
     }
+    if (isHr(line)) return 3;
     return 7;
   }
   if (c0 === 62) return 4;
